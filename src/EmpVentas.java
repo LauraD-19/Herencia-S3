@@ -34,13 +34,12 @@ public class EmpVentas extends Empresa{
 
     @Override
     public String toString() {
-        return super.toString()+"EmpVentas{" +
-                "totalVentas=" + totalVentas +
-                ", procentajeComision=" + procentajeComision +
-                '}';
+        return super.toString()+", \uD83C\uDF3Bempleado ventas\uD83C\uDF3B" +
+                ", total ventas=" + totalVentas +
+                ", procentaje comision=" + procentajeComision;
     }
     public String mostrarInfo() {
-        return "nombre: " + nombre +"\n"+ "Edad: " + edad +"\n" + "salarioBase: " + salarioBase+"\n"+ "Comision (%): "+procentajeComision+"\n"+"Total ventas: "+totalVentas+"\n";
+        return "--\uD83C\uDF3BVentas-"+"-Nombre: " + nombre +" --Edad: " + edad +" --SalarioBase: " + salarioBase+" --Comision: "+procentajeComision+"%"+" --Total ventas: "+totalVentas+"\n";
     }
     public double calcularComision(){
         double v1=totalVentas*procentajeComision;

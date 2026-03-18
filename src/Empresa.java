@@ -38,15 +38,13 @@ public class Empresa {
 
     @Override
     public String toString() {
-        return "Empresa{" +
-                "nombre='" + nombre + '\'' +
+        return "Nombre=" + nombre +
                 ", edad=" + edad +
-                ", salarioBase=" + salarioBase +
-                '}';
+                ", Salario base=" + salarioBase;
     }
 
     public String mostrarInfo() {
-        return  "nombre: " + nombre +"\n"+ "Edad: " + edad +"\n" + "salarioBase: " + salarioBase+"\n";
+        return  "--Nombre: " + nombre +" --Edad: " + edad +" --SalarioBase: " + salarioBase+"\n";
     }
     public double calcularSalario(){
 

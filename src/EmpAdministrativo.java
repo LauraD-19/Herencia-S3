@@ -23,13 +23,12 @@ public class EmpAdministrativo extends Empresa{
 
     @Override
     public String toString() {
-        return super.toString()+"EmpAdministrativo{" +
-                "bonificacion=" + bonificacion +
-                '}';
+        return super.toString()+", \uD83C\uDF6Fempleado administrativo\uD83C\uDF6F" +
+                ", bonificacion=" + bonificacion;
     }
 
     public String mostrarInfo() {
-        return "Empleados Administrativos: \n"+"nombre: " + nombre +"\n"+ "Edad: " + edad +"\n" + "salarioBase: " + salarioBase+"\n"+ "Bonificación: "+bonificacion+"\n";
+        return "--\uD83C\uDF6FAdministrativos-"+"-Nombre: " + nombre +" --Edad: " + edad +" --SalarioBase: " + salarioBase+" --Bonificación: "+bonificacion+"\n";
     }
     public double calcularSalario(){
         double v1=salarioBase+bonificacion;

@@ -34,13 +34,12 @@ public class EmpHoras extends Empresa{
 
     @Override
     public String toString() {
-        return super.toString()+"EmpHoras{" +
-                "horasTrabajadas=" + horasTrabajadas +
-                ", valorHoras=" + valorHoras +
-                '}';
+        return super.toString()+", ☀\uFE0Fempleado por horas☀\uFE0F" +
+                ", horas trabajadas=" + horasTrabajadas +
+                ", valor horas=" + valorHoras;
     }
     public String mostrarInfo() {
-        return "nombre: " + nombre +"\n"+ "Edad: " + edad +"\n" + "salarioBase: " + salarioBase+"\n"+ "Horas trabajadas: "+horasTrabajadas+"\n"+"Valor horas: "+valorHoras+"\n";
+        return "--☀\uFE0FPor horas-"+"-Nombre: " + nombre +" --Edad: " + edad +" --SalarioBase: " + salarioBase+" --Horas trabajadas: "+horasTrabajadas+" --Valor horas: "+valorHoras+"\n";
     }
 
     public double calcularSalario(){

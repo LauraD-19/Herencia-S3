@@ -7,12 +7,13 @@ public class Main {
         Scanner teclado=new Scanner(System.in);
         List<Empresa> EmpresaList = new ArrayList<>();
         int op;
+        String buscar;
 
-        System.out.println("Bienvenido (•◡•) /");
+        System.out.println("Bienvenido a Mielex \uD83D\uDC1D");
 
         do {
-            System.out.println("\nPor favor eliga una de las siguientes opciones:");
-            System.out.println(" 1. Para agregar un empleado administrativo \n 2. Para agregar un empleado de ventas \n 3. Agregar un empleado por horas \n 4. Mostrar todos los empleados \n 5. Buscar un empleado \n 6. Salir");
+            System.out.println("\n\uD83D\uDC1DPor favor eliga una de las siguientes opciones\uD83D\uDC1D:");
+            System.out.println(" 1. Agregar un empleado administrativo \n 2. Agregar un empleado de ventas \n 3. Agregar un empleado por horas \n 4. Mostrar todos los empleados \n 5. Buscar un empleado \n 6. Salir");
             op = teclado.nextInt();
             switch (op){
                 case 1://administrativo
@@ -30,7 +31,23 @@ public class Main {
                         System.out.println(E.mostrarInfo());
                     }
                     break;
-                case 5:
+                case 5://buscar empleado por nombre
+                    System.out.println("Escriba el nombre del empleado: ");
+                    teclado.nextLine();
+                    buscar = teclado.nextLine();
+                    boolean encontrado=false;
+                    for (Empresa E : EmpresaList) {
+                        if (buscar.equalsIgnoreCase(E.getNombre())) {
+                            System.out.println(E);
+                            encontrado=true;
+                            break;
+                        }
+                    }
+                    if(!encontrado){
+                        System.out.println("El empleado no se encuentra registrado o esta mal escrito \nPor favor intentelo de nuevo");
+
+                    }
+                    break;
 
                 case 6:
                     System.out.println("Saliendo...");
@@ -59,7 +76,7 @@ public class Main {
 
         EmpAdministrativo empleadosA= new EmpAdministrativo(nombre, edad, salarioBase, bonificacion);
         EmpresaList.add(empleadosA);
-        System.out.println("--Empleado registrado...");
+        System.out.println("\n--Empleado registrado...\uD83C\uDF6F");
     }
     private static void EmpleadoVE(Scanner teclado, List<Empresa> EmpresaList) {
         teclado.nextLine();
@@ -76,7 +93,7 @@ public class Main {
 
         EmpVentas empleadosV= new EmpVentas(nombre, edad, salarioBase, totalVentas, porcentajeComisiones );
         EmpresaList.add(empleadosV);
-        System.out.println("--Empleado registrado...");
+        System.out.println("\n--Empleado registrado...\uD83C\uDF3B");
     }
     private static void EmpleadoHO(Scanner teclado, List<Empresa> EmpresaList) {
         teclado.nextLine();
@@ -93,6 +110,6 @@ public class Main {
 
         EmpHoras empleados= new EmpHoras(nombre, edad, salarioBase, horasTrabajadas, valorHoras);
         EmpresaList.add(empleados);
-        System.out.println("--Empleado registrado...");
+        System.out.println("\n--Empleado registrado...☀\uFE0F");
     }
 }
