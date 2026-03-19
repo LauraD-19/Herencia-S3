@@ -30,6 +30,8 @@ public class EmpAdministrativo extends Empresa{
     public String mostrarInfo() {
         return "--\uD83C\uDF6FAdministrativos-"+"-Nombre: " + nombre +" --ID: "+id +" --Edad: " + edad +" --SalarioBase: " + salarioBase+" --Bonificación: "+bonificacion+"\n";
     }
+
+    @Override
     public double calcularSalario(){
         double v1=salarioBase+bonificacion;
         return v1;

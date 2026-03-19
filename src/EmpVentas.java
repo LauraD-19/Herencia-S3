@@ -45,6 +45,8 @@ public class EmpVentas extends Empresa{
         double v1=totalVentas*procentajeComision;
         return v1;
     }
+
+    @Override
     public double calcularSalario(){
         double v2=salarioBase*calcularComision();
         return v2;

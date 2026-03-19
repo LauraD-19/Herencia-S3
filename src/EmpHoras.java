@@ -42,9 +42,10 @@ public class EmpHoras extends Empresa{
         return "--☀\uFE0FPor horas-"+"-Nombre: " + nombre +" --ID: "+id +" --Edad: " + edad +" --SalarioBase: " + salarioBase+" --Horas trabajadas: "+horasTrabajadas+" --Valor horas: "+valorHoras+"\n";
     }
 
+    @Override
     public double calcularSalario(){
 
-        double h3=horasTrabajadas*valorHoras;
+        double h3=(salarioBase+(horasTrabajadas*valorHoras));
         return h3;
     }
 }
