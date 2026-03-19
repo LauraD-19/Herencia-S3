@@ -10,8 +10,8 @@ public class EmpHoras extends Empresa{
         this.valorHoras = valorHoras;
     }
 
-    public EmpHoras(String nombre, int edad, double salarioBase, int horasTrabajadas, double valorHoras) {
-        super(nombre, edad, salarioBase);
+    public EmpHoras(String nombre, int edad, int id, double salarioBase, int horasTrabajadas, double valorHoras) {
+        super(nombre,id, edad, salarioBase);
         this.horasTrabajadas = horasTrabajadas;
         this.valorHoras = valorHoras;
     }
@@ -39,7 +39,7 @@ public class EmpHoras extends Empresa{
                 ", valor horas=" + valorHoras;
     }
     public String mostrarInfo() {
-        return "--☀\uFE0FPor horas-"+"-Nombre: " + nombre +" --Edad: " + edad +" --SalarioBase: " + salarioBase+" --Horas trabajadas: "+horasTrabajadas+" --Valor horas: "+valorHoras+"\n";
+        return "--☀\uFE0FPor horas-"+"-Nombre: " + nombre +" --ID: "+id +" --Edad: " + edad +" --SalarioBase: " + salarioBase+" --Horas trabajadas: "+horasTrabajadas+" --Valor horas: "+valorHoras+"\n";
     }
 
     public double calcularSalario(){

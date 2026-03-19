@@ -10,8 +10,8 @@ public class EmpVentas extends Empresa{
         this.procentajeComision = procentajeComision;
     }
 
-    public EmpVentas(String nombre, int edad, double salarioBase, double totalVentas, double procentajeComision) {
-        super(nombre, edad, salarioBase);
+    public EmpVentas(String nombre, int edad,int id, double salarioBase, double totalVentas, double procentajeComision) {
+        super(nombre, id,  edad, salarioBase);
         this.totalVentas = totalVentas;
         this.procentajeComision = procentajeComision;
     }
@@ -39,7 +39,7 @@ public class EmpVentas extends Empresa{
                 ", procentaje comision=" + procentajeComision;
     }
     public String mostrarInfo() {
-        return "--\uD83C\uDF3BVentas-"+"-Nombre: " + nombre +" --Edad: " + edad +" --SalarioBase: " + salarioBase+" --Comision: "+procentajeComision+"%"+" --Total ventas: "+totalVentas+"\n";
+        return "--\uD83C\uDF3BVentas-"+"-Nombre: " + nombre +" --ID: "+id +" --Edad: " + edad +" --SalarioBase: " + salarioBase+" --Comision: "+procentajeComision+"%"+" --Total ventas: "+totalVentas+"\n";
     }
     public double calcularComision(){
         double v1=totalVentas*procentajeComision;

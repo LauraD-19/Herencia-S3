@@ -8,8 +8,8 @@ public class EmpAdministrativo extends Empresa{
         this.bonificacion = bonificacion;
     }
 
-    public EmpAdministrativo(String nombre, int edad, double salarioBase, double bonificacion) {
-        super(nombre, edad, salarioBase);
+    public EmpAdministrativo(String nombre,int id, int edad, double salarioBase, double bonificacion) {
+        super(nombre, id, edad, salarioBase);
         this.bonificacion = bonificacion;
     }
 
@@ -28,7 +28,7 @@ public class EmpAdministrativo extends Empresa{
     }
 
     public String mostrarInfo() {
-        return "--\uD83C\uDF6FAdministrativos-"+"-Nombre: " + nombre +" --Edad: " + edad +" --SalarioBase: " + salarioBase+" --Bonificación: "+bonificacion+"\n";
+        return "--\uD83C\uDF6FAdministrativos-"+"-Nombre: " + nombre +" --ID: "+id +" --Edad: " + edad +" --SalarioBase: " + salarioBase+" --Bonificación: "+bonificacion+"\n";
     }
     public double calcularSalario(){
         double v1=salarioBase+bonificacion;
