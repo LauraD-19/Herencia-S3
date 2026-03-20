@@ -48,7 +48,7 @@ public class EmpVentas extends Empresa{
 
     @Override
     public double calcularSalario(){
-        double v2=salarioBase*calcularComision();
+        double v2=salarioBase+calcularComision();
         return v2;
     }
 

@@ -60,10 +60,13 @@ public class Empresa {
     }
     public double calcularSalario(){
 
-        return calcularSalario();
+        return salarioBase;
     }
-    public int verificarEdad(){
+    public boolean verificarEdad(){
+        return this.edad>=18;
+    }
+    public void aumentarSalario(double aumento){
+        this.salarioBase+=aumento;
 
-        return verificarEdad();
     }
 }
